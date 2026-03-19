@@ -1,0 +1,14 @@
+{
+    "name": "feedex/feedex",
+    "type": "library",
+    "description": "Feedex core contracts and exchange registry.",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Feedex\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.4"
+    }
+}
