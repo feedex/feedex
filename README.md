@@ -88,14 +88,6 @@ An adapter package should:
 4. Provide an `ExchangeFactoryInterface` implementation
 5. Be registered in `Feedex` via `->register(...)`
 
-## Compatibility matrix
-
-| `feedex/feedex` | `feedex/coinex` |
-|---|---|
-| `^0.1` | `^0.1` |
-
-> Keep adapter constraints aligned with the core major/minor contract version.
-
 ## Package scope
 
 This repository is intentionally minimal and stable.
