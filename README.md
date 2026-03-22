@@ -43,6 +43,7 @@ Standard capabilities for exchange modules, e.g.:
 - `SpotDealModuleInterface`
 - `FuturesMarketModuleInterface`
 - `FuturesOrderModuleInterface`
+- `FuturesDealModuleInterface`
 
 ### 4) Capability contracts
 Exchange clients declare supported modules via capability interfaces, e.g.:
@@ -55,6 +56,7 @@ Exchange clients declare supported modules via capability interfaces, e.g.:
 - `HasSpotDealModuleInterface`
 - `HasFuturesMarketModuleInterface`
 - `HasFuturesOrderModuleInterface`
+- `HasFuturesDealModuleInterface`
 
 ### 5) `Feedex` registry/manager
 Central place to register adapter factories and resolve exchanges by id.
