@@ -37,7 +37,11 @@ Standard capabilities for exchange modules, e.g.:
 
 - `CommonModuleInterface`
 - `AccountModuleInterface`
+- `AccountSubModuleInterface`
 - `AssetModuleInterface`
+- `AssetTransferModuleInterface`
+- `AssetDepositWithdrawalModuleInterface`
+- `AssetLoanModuleInterface`
 - `SpotMarketModuleInterface`
 - `SpotOrderModuleInterface`
 - `SpotDealModuleInterface`
@@ -51,7 +55,11 @@ Exchange clients declare supported modules via capability interfaces, e.g.:
 
 - `HasCommonModuleInterface`
 - `HasAccountModuleInterface`
+- `HasAccountSubModuleInterface`
 - `HasAssetModuleInterface`
+- `HasAssetTransferModuleInterface`
+- `HasAssetDepositWithdrawalModuleInterface`
+- `HasAssetLoanModuleInterface`
 - `HasSpotMarketModuleInterface`
 - `HasSpotOrderModuleInterface`
 - `HasSpotDealModuleInterface`
