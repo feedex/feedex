@@ -1,0 +1,12 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Feedex\Contracts\Capabilities;
+
+use Feedex\Contracts\Modules\AccountSubModuleInterface;
+
+interface HasAccountSubModuleInterface
+{
+    public function accountSub(): AccountSubModuleInterface;
+}
