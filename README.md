@@ -50,6 +50,19 @@ Standard capabilities for exchange modules, e.g.:
 - `FuturesDealModuleInterface`
 - `FuturesPositionModuleInterface`
 
+For adapter flexibility, core also provides granular sub-contracts (additive, non-breaking), for example:
+
+- `AssetSpotBalanceModuleInterface`
+- `AssetExtendedBalancesModuleInterface`
+- `SpotMarketCoreModuleInterface`
+- `SpotMarketIndexModuleInterface`
+- `SpotOrderCoreModuleInterface`
+- `SpotOrderAdvancedModuleInterface`
+- `FuturesMarketCoreModuleInterface`
+- `FuturesMarketAnalyticsModuleInterface`
+- `FuturesOrderCoreModuleInterface`
+- `FuturesOrderAdvancedModuleInterface`
+
 ### 4) Capability contracts
 Exchange clients declare supported modules via capability interfaces, e.g.:
 
@@ -67,6 +80,19 @@ Exchange clients declare supported modules via capability interfaces, e.g.:
 - `HasFuturesOrderModuleInterface`
 - `HasFuturesDealModuleInterface`
 - `HasFuturesPositionModuleInterface`
+
+Granular capability contracts are also available for partial implementations, for example:
+
+- `HasAssetSpotBalanceModuleInterface`
+- `HasAssetExtendedBalancesModuleInterface`
+- `HasSpotMarketCoreModuleInterface`
+- `HasSpotMarketIndexModuleInterface`
+- `HasSpotOrderCoreModuleInterface`
+- `HasSpotOrderAdvancedModuleInterface`
+- `HasFuturesMarketCoreModuleInterface`
+- `HasFuturesMarketAnalyticsModuleInterface`
+- `HasFuturesOrderCoreModuleInterface`
+- `HasFuturesOrderAdvancedModuleInterface`
 
 ### 5) `Feedex` registry/manager
 Central place to register adapter factories and resolve exchanges by id.
