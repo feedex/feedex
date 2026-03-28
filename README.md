@@ -123,7 +123,7 @@ use Feedex\Contracts\Capabilities\HasSpotOrderAdvancedModuleInterface;
 use Feedex\Contracts\Capabilities\HasSpotOrderCoreModuleInterface;
 use Feedex\Contracts\Capabilities\HasSpotOrderModuleInterface;
 
-$exchange = $feedex->exchange('kucoin', $config);
+$exchange = $coinex; // or any resolved exchange instance
 
 if ($exchange instanceof HasSpotOrderModuleInterface
     || $exchange instanceof HasSpotOrderCoreModuleInterface) {
