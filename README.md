@@ -155,6 +155,21 @@ An adapter package should:
 4. Provide an `ExchangeFactoryInterface` implementation
 5. Be registered in `Feedex` via `->register(...)`
 
+## v1.0.0 scope freeze (core)
+
+For the first stable release, core scope is frozen to:
+
+- registry and factory contracts (`Feedex`, `ExchangeInterface`, `ExchangeFactoryInterface`)
+- current broad module/capability contracts
+- current granular module/capability contracts for partial adapter implementations
+- stable error behavior for unknown exchange resolution
+
+Out of scope for core v1.0.0:
+
+- transport/auth/signing logic
+- exchange-specific DTO mapping
+- exchange endpoint implementations
+
 ## Package scope
 
 This repository is intentionally minimal and stable.
