@@ -170,6 +170,10 @@ Out of scope for core v1.0.0:
 - exchange-specific DTO mapping
 - exchange endpoint implementations
 
+## Changelog
+
+See [`CHANGELOG.md`](CHANGELOG.md) for release history.
+
 ## Package scope
 
 This repository is intentionally minimal and stable.
