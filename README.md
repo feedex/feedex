@@ -119,16 +119,19 @@ $markets = $coinex->spotMarket()->listMarkets();
 When using multiple adapters, check capabilities before calling module methods:
 
 ```php
-use Feedex\Contracts\Capabilities\HasSpotOrderCoreModuleInterface;
 use Feedex\Contracts\Capabilities\HasSpotOrderAdvancedModuleInterface;
+use Feedex\Contracts\Capabilities\HasSpotOrderCoreModuleInterface;
+use Feedex\Contracts\Capabilities\HasSpotOrderModuleInterface;
 
 $exchange = $feedex->exchange('kucoin', $config);
 
-if ($exchange instanceof HasSpotOrderCoreModuleInterface) {
+if ($exchange instanceof HasSpotOrderModuleInterface
+    || $exchange instanceof HasSpotOrderCoreModuleInterface) {
     $exchange->spotOrder()->putOrder($payload);
 }
 
-if ($exchange instanceof HasSpotOrderAdvancedModuleInterface) {
+if ($exchange instanceof HasSpotOrderModuleInterface
+    || $exchange instanceof HasSpotOrderAdvancedModuleInterface) {
     // available only on adapters that support advanced order flows
     $exchange->spotOrder()->putBatchOrder($batchPayload);
 }
