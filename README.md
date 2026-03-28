@@ -114,6 +114,28 @@ $coinex = $feedex->exchange('coinex', [
 $markets = $coinex->spotMarket()->listMarkets();
 ```
 
+## Capability-driven consumption (multi-adapter safe)
+
+When using multiple adapters, check capabilities before calling module methods:
+
+```php
+use Feedex\Contracts\Capabilities\HasSpotOrderCoreModuleInterface;
+use Feedex\Contracts\Capabilities\HasSpotOrderAdvancedModuleInterface;
+
+$exchange = $feedex->exchange('kucoin', $config);
+
+if ($exchange instanceof HasSpotOrderCoreModuleInterface) {
+    $exchange->spotOrder()->putOrder($payload);
+}
+
+if ($exchange instanceof HasSpotOrderAdvancedModuleInterface) {
+    // available only on adapters that support advanced order flows
+    $exchange->spotOrder()->putBatchOrder($batchPayload);
+}
+```
+
+This allows clients to consume a common core while adapting behavior to each exchange’s supported depth.
+
 ## Error handling
 
 If you request an exchange that is not registered, `Feedex` throws:
